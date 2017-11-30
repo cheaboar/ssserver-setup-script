@@ -26,8 +26,8 @@ touch /var/log/kcptun/server.log
 
 #install php 
 apt-get install -y php
-mkdir -p /root/code
-cp index.php /root/code/ 
+mkdir -p /root/code/php-server
+cp index.php /root/code/php-server/
 
 #kcptun
 chmod +x server_linux_amd64
