@@ -1,0 +1,15 @@
+{ 
+    "listen": ":29900",
+    "target": "127.0.0.1:500",
+    "key": "very fast",
+    "crypt": "aes",
+    "mode": "fast2",
+    "mtu": 1350,
+    "sndwnd": 512,
+    "rcvwnd": 512,
+    "datashard": 10,
+    "parityshard": 3,
+    "dscp": 0,
+    "nocomp": false,
+    "pprof": false
+  }
