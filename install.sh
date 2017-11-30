@@ -33,6 +33,5 @@ cp index.php /root/code/
 chmod +x server_linux_amd64
 mkdir -p /usr/local/kcptun
 mv server_linux_amd64 /usr/local/kcptun/
-mv server_linux_amd64 /usr/local/kcptun/
 
 supervisord -c /etc/supervisord.conf
