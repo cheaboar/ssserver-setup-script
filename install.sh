@@ -1,11 +1,13 @@
 #!/bin/sh
 
+useradd kcptun
 #install supervisor
 
 apt-get install -y python-setuptools
 easy_install supervisor
 echo_supervisord_conf > /etc/supervisord.conf
 mkdir -p /etc/supervisor
+mkdir -p /etc/supervisor/conf.d
 
 #install shadowsocks
 
@@ -22,12 +24,16 @@ cp server-config.json /usr/local/kcptun/server-config.json
 mkdir -p /var/log/kcptun
 touch /var/log/kcptun/server.log
 
+#install php 
+apt-get install -y php
+mkdir -p /root/code
+cp index.php /root/code/ 
 
 #get kcptun
 
 wget https://github.com/xtaci/kcptun/releases/download/v20171129/kcptun-linux-amd64-20171129.tar.gz
 tar -xvf kcptun-linux-amd64-20171129.tar.gz
-rm kcptun-linux-amd64-20171129.tar.gz
+rm kcptun-linux-amd64-20171129.tar.gzls
 mkdir -p /usr/local/kcptun
 mv server_linux_amd64 /usr/local/kcptun/server_linux_amd64
 
