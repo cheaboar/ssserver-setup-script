@@ -29,12 +29,10 @@ apt-get install -y php
 mkdir -p /root/code
 cp index.php /root/code/ 
 
-#get kcptun
-
-wget https://github.com/xtaci/kcptun/releases/download/v20171129/kcptun-linux-amd64-20171129.tar.gz
-tar -xvf kcptun-linux-amd64-20171129.tar.gz
-rm kcptun-linux-amd64-20171129.tar.gzls
+#kcptun
+chmod +x server_linux_amd64
 mkdir -p /usr/local/kcptun
-mv server_linux_amd64 /usr/local/kcptun/server_linux_amd64
+mv server_linux_amd64 /usr/local/kcptun/
+mv server_linux_amd64 /usr/local/kcptun/
 
 supervisord -c /etc/supervisord.conf
