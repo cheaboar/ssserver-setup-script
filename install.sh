@@ -8,7 +8,7 @@ easy_install supervisor
 echo_supervisord_conf > /etc/supervisord.conf
 mkdir -p /etc/supervisor
 mkdir -p /etc/supervisor/conf.d
-
+mkdir -p /usr/local/kcptun
 #install shadowsocks
 
 apt-get install -y python-pip
@@ -32,7 +32,7 @@ cp index.php /root/code/php-server/
 
 #kcptun
 chmod +x server_linux_amd64
-mkdir -p /usr/local/kcptun
+
 mv server_linux_amd64 /usr/local/kcptun/
 
 supervisord -c /etc/supervisord.conf
